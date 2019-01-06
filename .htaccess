@@ -1,0 +1,59 @@
+# INDIAN timezone
+SetEnv TZ Asia/Kolkata
+
+ErrorDocument 404 /nita/error/404.php
+ErrorDocument 403 /nita/error/403.php
+ErrorDocument 500 /nita/error/500.php
+
+RewriteEngine On
+# RewriteCond %{HTTP_HOST} ^localhost:81 [NC]
+
+# RewriteRule notices.php
+RewriteRule ^notices.php/(.*)$ notices.php?type=$1&page=1 [NC]
+RewriteRule ^notices.php/$ notices.php?type=all&page=1 [NC]
+RewriteRule ^notices.php$ notices.php?type=all&page=1 [NC]
+RewriteRule ^notices.php/(.*)/$ notices.php?type=$1&page=1 [NC]
+
+RewriteRule ^notices.php/(.*)/(.*)$ notices.php?type=$1&page=$2 [NC]
+RewriteRule ^notices.php/(.*)/(.*)/$ notices.php?type=$1&page=$2 [NC]
+
+
+# RewriteRule tenders.php
+RewriteRule ^tenders.php/(.*)$ tenders.php?type=$1&page=1 [NC]
+RewriteRule ^tenders.php/$ tenders.php?type=all&page=1 [NC]
+RewriteRule ^tenders.php$ tenders.php?type=all&page=1 [NC]
+RewriteRule ^tenders.php/(.*)/$ tenders.php?type=$1&page=1 [NC]
+
+RewriteRule ^tenders.php/(.*)/(.*)$ tenders.php?type=$1&page=$2 [NC]
+RewriteRule ^tenders.php/(.*)/(.*)/$ tenders.php?type=all&page=$2 [NC]
+
+
+# RewriteRule news-announcements.php
+RewriteRule ^news-announcements.php/(.*)$ news-announcements.php?page=$1 [NC]
+RewriteRule ^news-announcements.php/$ news-announcements.php?page=1 [NC]
+RewriteRule ^news-announcements.php$ news-announcements.php?page=1 [NC]
+RewriteRule ^news-announcements.php/(.*)/$ news-announcements.php?page=$1 [NC]
+
+# remove php file extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# Deny Directory Listing Permission
+Options -Indexes
+
+# Removing index.php
+#
+# RewriteRule ^index\.php?$ /nita/ [R=301]
+# RewriteRule ^(.*)/index\.php$ /nita/$1/ [R=301]
+
+# IMAGE CACHING
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>

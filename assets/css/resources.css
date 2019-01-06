@@ -1,0 +1,53 @@
+#resources-page a {
+    color: var(--theme);
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+#resources-page a:hover {
+    text-decoration: none;
+    color: var(--theme);
+}
+
+.underline-60-100 {
+    width: 50%;
+    height: 1px;
+    background-color: #800000;
+    transition: 0.75s;
+}
+
+#resources-page a:hover .underline-60-100 {
+    width: 80%;
+}
+
+.indv-resource-block {
+    padding-bottom: 1rem;
+    width: 100%;
+    transition: 1.5s;
+}
+
+.indv-resource-block:hover {
+    box-shadow: 0 0 30px 5px #333;
+}
+
+.indv-resource-block i {
+    font-size: 7.5rem;
+    margin-top: 1rem;
+}
+
+table {
+    margin: 1.5rem 0;
+}
+
+table tr th {
+    padding: 0.5rem;
+    border: 1px solid #111;
+}
+
+#teqip-page a i {
+    font-size: 2rem;
+}
+
+#teqip-page a:hover {
+    color: var(--theme);
+}

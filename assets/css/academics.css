@@ -1,0 +1,137 @@
+h1 {
+    padding: 2rem 0;
+}
+
+main {
+    padding-bottom: 2rem;
+    min-height: calc(100vh - 36.125rem);
+}
+
+main a {
+    color: var(--theme);
+}
+
+main a:hover {
+    color: var(--theme);
+}
+
+#academics-page img, #faculty-page img, #staff-page img {
+    width: 100%;
+    height: auto;
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    transition: 0.3s;
+}
+
+.img-container img:hover {
+    transform: scale(1.1);
+}
+
+.dept-banner {
+    max-height: 35vh;
+    min-height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+h3 {
+    margin-bottom: 1rem;
+}
+
+#faculty-page input[type="submit"], #staff-page input[type="submit"] {
+    color: #0000c0;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+#faculty-page input[type="submit"]:hover, #staff-page input[type="submit"]:hover {
+    text-decoration: underline;
+}
+
+#faculty-page table {
+    width: 100%;
+}
+
+.w-22 {
+    width: 22%;
+}
+
+.w-18 {
+    width: 18%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.fac-indv {
+    margin-bottom: 2rem;
+}
+
+table a {
+    color: #0000c0;
+}
+
+table a:hover {
+    color: #0000c0;
+}
+
+table tr th {
+    padding: 0.5rem;
+    border: 1px solid #111;
+}
+
+.indv-dept-block:hover {
+    box-shadow: 0 0 15px 5px #333;
+    text-decoration: none;
+}
+
+.blue-links a {
+    color: #00f;
+}
+
+.blue-links a:hover {
+    color: #00e;
+}
+
+.indv-block {
+    padding-bottom: 1rem;
+    width: 100%;
+    transition: 1.5s;
+}
+
+.indv-block:hover {
+    box-shadow: 0 0 30px 5px #333;
+}
+
+.indv-block i {
+    font-size: 5rem;
+    margin-top: 1rem;
+}
+
+.underline-60-100 {
+    width: 50%;
+    height: 1px;
+    background-color: #800000;
+    transition: 0.75s;
+}
+
+a:hover .underline-60-100 {
+    width: 80%;
+}
+
+.underline-80-center {
+    width: 80%;
+    margin-left: 10%;
+    height: 1px;
+    background-color: #800000;
+}

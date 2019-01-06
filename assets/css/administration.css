@@ -1,0 +1,17 @@
+#administration-page li a {
+    color: var(--theme);
+}
+
+#administration-page li a:hover {
+    color: #fff;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+.middle {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

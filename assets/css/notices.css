@@ -1,0 +1,52 @@
+.pdf-container .content {
+    color: var(--theme);
+}
+
+.subject-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.row.subject {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    line-height: 2;
+    border-bottom: 2px solid var(--theme);
+    color: #fff;
+    background-color: var(--theme);
+}
+
+.col-left {
+    border-right: 1px solid var(--theme);
+    border-right: 1px solid rgba(128, 0, 0, 0.3);
+}
+
+.row.subject .col-left {
+    border-right: 1px solid #fff;
+}
+
+.pdf-container hr {
+    margin: 0;
+    background-color: var(--theme);
+    background-color: rgba(128, 0, 0, 0.3);
+}
+
+@media only screen
+    and (min-width:992px) {
+    .container.custom {
+        max-width: 992px;
+    }
+}
+
+.pdf-container {
+    border: 2px solid var(--theme);
+    padding: 0 1rem;
+}
+
+.pdf-container .row.odd {
+    background-color: rgba(128, 0, 0, 0.2);
+}
+
+.pdf-container .row.odd, .pdf-container .row.even {
+    padding: 1rem 0;
+}

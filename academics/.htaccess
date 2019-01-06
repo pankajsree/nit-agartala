@@ -1,0 +1,24 @@
+RewriteEngine On
+
+RewriteRule ^department.php/(.*)/programmes$ programmes.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/faculty$ faculty.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/staff$ staff.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/facilities$ facilities.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/research$ research.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/(.*)/(.*)/publications$ publications.php?role=$2&mem=$3 [NC]
+RewriteRule ^department.php/(.*)/admission$ admission.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/placement$ placement.php?dept_code=$1 [NC]
+RewriteRule ^department.php/(.*)/events$ events.php?dept_code=$1 [NC]
+
+RewriteRule ^department.php/(.*)$ department.php?dept_code=$1 [NC]
+
+RewriteRule ^departments.php$ departments.php [NC]
+
+RewriteRule ^activities.php$ activities.php?type=upcoming&page=1 [NC]
+RewriteRule ^activities.php/(.*)$ activities.php?type=$1&page=1 [NC]
+
+# NOT WORKING
+# RewriteRule activities.php/(.*)/$ activities.php?type=$1&page=1 [NC]
+
+RewriteRule ^activities.php/(.*)/(.*)$ activities.php?type=$1&page=$2 [NC]
+RewriteRule ^activities.php/(.*)/(.*)/$ activities.php?type=$1&page=$2 [NC]

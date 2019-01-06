@@ -1,0 +1,29 @@
+#gallery-page img {
+    width: 100%;
+    height: auto;
+}
+
+.gallery-col-content {
+    overflow: hidden;
+}
+
+.gallery-col-content img {
+    transition: 0.3s;
+}
+
+.gallery-col-content img:hover {
+    transform: scale(1.1);
+}
+
+#gallery-page img {
+    object-fit: cover;
+    object-position: center;
+}
+
+#gallery-page .row {
+    justify-content: center;
+}
+
+.column {
+    margin: 0.75rem 0;
+}
